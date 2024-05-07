@@ -10,14 +10,21 @@ import * as icons from '@fortawesome/free-solid-svg-icons';
   imports: [FontAwesomeModule],
 })
 export class IconsLoaderComponent {
+  isDisabled = false;
+  delay = 3000;
   icon: icons.IconDefinition = icons.faSortAlphaDown;
 
   onLoadIcon() {
-    const iconNames = Object.keys(icons);
-    const randomIndex = Math.floor(Math.random() * iconNames.length);
+    this.isDisabled = true;
 
-    this.icon = icons[
-      iconNames[randomIndex] as keyof typeof icons
-    ] as icons.IconDefinition;
+    setTimeout(() => {
+      const iconNames = Object.keys(icons);
+      const randomIndex = Math.floor(Math.random() * iconNames.length);
+
+      this.icon = icons[
+        iconNames[randomIndex] as keyof typeof icons
+      ] as icons.IconDefinition;
+      this.isDisabled = false;
+    }, this.delay);
   }
 }

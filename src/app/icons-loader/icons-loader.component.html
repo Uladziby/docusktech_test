@@ -1,2 +1,4 @@
 <fa-icon [icon]="icon" size="6x" class="icon"></fa-icon>
-<button (click)="onLoadIcon()">Next</button>
+<button (click)="onLoadIcon()" [disabled]="isDisabled">
+  {{ isDisabled ? "...Please wait" : "Next" }}
+</button>
