@@ -1,5 +1,8 @@
 # DocusktechTest
 
+![image](https://github.com/Uladziby/docusktech_test/assets/65710785/d41333c1-77b4-493a-b8b8-c53ebd9e9f67)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
 
 ## Development server
